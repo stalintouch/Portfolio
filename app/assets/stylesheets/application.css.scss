@@ -10,7 +10,15 @@ $border: #E9E9E9;
 }
 body {
   font-family: 'Raleway', sans-serif;
+  height: 100%;
+  // background: -webkit-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  // background:    -moz-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  // background:     -ms-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  // background:      -o-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  // background:         linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  // font-family: 'Lato', sans-serif;
 }
+  
 
 .wrapper {
   width: 90%;
@@ -38,6 +46,12 @@ body {
 
 .hidden {
   display: none;
+}
+
+.notice, .alert {
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 1px solid $border;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
@@ -96,6 +110,7 @@ hr {
 #main_navigation {
   padding: 2.5em 5%;
   border-bottom: 1px solid $border;
+  background-color: rgba(180,180,180, 0.5);
   .name {
     font-weight: 700;
     font-size: .7em;
@@ -129,6 +144,9 @@ hr {
 #main_footer {
   padding: 2.5em 5%;
   border-top: 1px solid $border;
+  background-color: rgba(180,180,180, 0.5);
+  
+
   .copyright {
     float: left;
     font-size: .9em;
