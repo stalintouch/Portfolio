@@ -1,10 +1,10 @@
-<h1 id="page_title">Yeah baby whatsup</h1>
+<h1 id="page_title">My Articles</h1>
 
 <div id="posts_wrapper" class="skinny_wrapper">
   <% @posts.each do |post| %>
     <div class="post">
       <p class="date"><%= post.created_at.strftime('%a, %B %d') %></p>
-      <h2><a href="#">The DO list</a></h2>
+      <h2><a href="#"><%= link_to post.title, post %></a></h2>
       <hr>
     </div>
   <% end %>
