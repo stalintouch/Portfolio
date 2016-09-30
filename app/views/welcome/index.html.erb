@@ -6,7 +6,7 @@
     <p>Who are we building it for? We are building it for ourselves, but also the community. Sharing what we are learning by blogging is a great way to learn for ourselves, but we teach others in the process. Show potential employers that we know what we are doing.</p>
   </div>
   <div class="col-2 homepage_content">
-    <h2>Apps I've built</h2>
+    <h2>Articles</h2>
     <hr>
 
     <% @posts.each do |post| %>
@@ -17,11 +17,9 @@
   <div class="col-3 homepage_content">
     <h2>Apps I've built</h2>
     <hr>
-    <h3><a href="#">The DO list</a></h3>
-    <p class="date">Saturday August 10th</p>
-    <h3><a href="#">The DO list</a></h3>
-    <p class="date">Saturday August 10th</p>
-    <h3><a href="#">The DO list</a></h3>
-    <p class="date">Saturday August 10th</p>
+    <% @projects.each do |project| %>
+    <h3><a href="#"><%= link_to project.title, project %></a></h3>
+    <p class="date"> <%=project.created_at.strftime("%A, %b %d")%></p>
+    <% end %>
   </div>
 </div>

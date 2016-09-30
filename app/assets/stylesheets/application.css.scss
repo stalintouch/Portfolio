@@ -157,7 +157,7 @@ textarea {
   min-height: 20em;
 }
 
-input[type="submit"] {
+input[type="submit"], .button {
   outline: none;
   background: transparent;
   border: 2px solid $border;
@@ -171,6 +171,17 @@ input[type="submit"] {
   }
 }
 
+.project_button {
+  background: $highlight;
+  color: $white;
+  text-decoration: none;
+  padding: 1em 2em;
+}
+
+.button_wrapper {
+  margin: 4em 0 0 0;
+  text-align: center;
+}
 
 @import 'welcome';
 @import 'posts_projects';
