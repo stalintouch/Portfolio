@@ -1,0 +1,27 @@
+<div class="wrapper wrapper_padding clearfix">
+  <div class="col-1 about homepage_content">
+    <h2>About</h2>
+    <hr>
+    <p>What are we building? We are building a personal site. A place where we can blog, share examples of our work, and have people contact us.</p>  
+    <p>Who are we building it for? We are building it for ourselves, but also the community. Sharing what we are learning by blogging is a great way to learn for ourselves, but we teach others in the process. Show potential employers that we know what we are doing.</p>
+  </div>
+  <div class="col-2 homepage_content">
+    <h2>Apps I've built</h2>
+    <hr>
+
+    <% @posts.each do |post| %>
+    <h3><a href="#"><%= link_to post.title, post %></a></h3>
+    <p class="date"> <%=post.created_at.strftime("%A, %b %d")%></p>
+    <% end %>
+  </div>
+  <div class="col-3 homepage_content">
+    <h2>Apps I've built</h2>
+    <hr>
+    <h3><a href="#">The DO list</a></h3>
+    <p class="date">Saturday August 10th</p>
+    <h3><a href="#">The DO list</a></h3>
+    <p class="date">Saturday August 10th</p>
+    <h3><a href="#">The DO list</a></h3>
+    <p class="date">Saturday August 10th</p>
+  </div>
+</div>

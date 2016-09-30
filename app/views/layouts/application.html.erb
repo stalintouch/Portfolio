@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
+  <title>Stalin Vasquez, Junior full stack Developer</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header id="main_navigation" class="clearfix">
+    <%= link_to "Stalin Vasquez", root_path, class: "name" %>
+    <nav>
+      
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-<%= yield %>
+  <%= yield %>
 
+  <footer id="main_footer">
+    <p class="copyright">&copy;2016 Stalin Vasquez</p>
+    <nav>
+      <a href="https://github.com/stalintouch" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/stalin-vasquez-b1717a127?trk=hp-identity-name" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a href="https://resume.creddle.io/resume/d67a5bplva9" target="_blank"><i class="fa fa-suitcase" aria-hidden="true"></i></a>
+    </nav>
+  </footer>
 </body>
 </html>
