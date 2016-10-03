@@ -12,7 +12,7 @@
   <div class="col-2 homepage_content">
     <h2>Articles</h2>
     <hr>
-
+    
     <% @posts.each do |post| %>
     <h3><a href="#"><%= link_to post.title, post %></a></h3>
     <p class="date"> <%= (post.created_at - 28.days).strftime("%A, %b %d") %></p>
