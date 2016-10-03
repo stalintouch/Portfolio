@@ -1,28 +1,12 @@
-== README
+This is a portfolio app created from a design perspective styling from scratch no Bootstrap following this principes for planning the application:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1 Answer Questions.
+    * What are we building?
+    * Who are we building it for?
+    * What features do we need to have?
+2 User Stories.
+3 Model our Data.
+4 Think through the pages we need in our app.
 
-Things you may want to cover:
+Rails 4.2.0 was used for building this app as well as ERB no HAML this time, Paperclip for image uploading, pygment and redcarpet for markup highlighting, will paginate for pages count, devise for users, PSQL for database, Capistrano passenger-phusion Nginx for deployment of a VPS.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
