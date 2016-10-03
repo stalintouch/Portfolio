@@ -11,11 +11,11 @@ $border: #E9E9E9;
 body {
   font-family: 'Raleway', sans-serif;
   height: 100%;
-  // background: -webkit-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
-  // background:    -moz-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
-  // background:     -ms-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
-  // background:      -o-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
-  // background:         linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  // background: -webkit-linear-gradient(90deg, #EDE574 10%, #E1F5C4 90%);
+  // background:    -moz-linear-gradient(90deg, #EDE574 10%, #E1F5C4 90%);
+  // background:     -ms-linear-gradient(90deg, #EDE574 10%, #E1F5C4 90%);
+  // background:      -o-linear-gradient(90deg, #EDE574 10%, #E1F5C4 90%);
+  // background:         linear-gradient(90deg, #EDE574 10%, #E1F5C4 90%);
   // font-family: 'Lato', sans-serif;
 }
   
@@ -29,10 +29,11 @@ body {
   width: 80%;
   max-width: 760px;
   margin: 0 auto;
+
 }
 
 .wrapper_padding {
-  padding: 4rem 0;
+  padding: 1rem 0;
 }
 
 .clearfix:before, .clearfix:after {
@@ -110,7 +111,9 @@ hr {
 #main_navigation {
   padding: 2.5em 5%;
   border-bottom: 1px solid $border;
-  background-color: rgba(180,180,180, 0.5);
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKBpo0_9lYlJg79XaPU_1iHIwGjeOT615-Fq0e0gyHQifwwQVnAQ");
+  background-repeat: no-repeat;
+  background-size:cover;
   .name {
     font-weight: 700;
     font-size: .7em;

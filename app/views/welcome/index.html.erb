@@ -2,8 +2,9 @@
   <div class="col-1 about homepage_content">
     <h2>About</h2>
     <hr>
-    <p>What are we building? We are building a personal site. A place where we can blog, share examples of our work, and have people contact us.</p>  
-    <p>Who are we building it for? We are building it for ourselves, but also the community. Sharing what we are learning by blogging is a great way to learn for ourselves, but we teach others in the process. Show potential employers that we know what we are doing.</p>
+    <p>I'm a Web Developer with a background in Civil Engineer. Having a passion to work on improving user experience as well as designing apps that
+    would improve peoples lives is my goal. <br> As a junior developer I'm looking for new challenges  that requires the need to learn new languages,
+    frameworks or technology that will enhance my skills and productivity.</p>
     <a href="https://github.com/stalintouch" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true">   </i></a>
     <a href="https://www.linkedin.com/in/stalin-vasquez-b1717a127?trk=hp-identity-name" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
     <a href="https://resume.creddle.io/resume/d67a5bplva9" target="_blank"><i class="fa fa-suitcase fa-2x" aria-hidden="true"></i></a>
@@ -14,19 +15,24 @@
 
     <% @posts.each do |post| %>
     <h3><a href="#"><%= link_to post.title, post %></a></h3>
-    <p class="date"> <%=post.created_at.strftime("%A, %b %d") %></p>
+    <p class="date"> <%= (post.created_at - 28.days).strftime("%A, %b %d") %></p>
     <% end %>
   </div>
 
+  <div class="homepage_content">
+    <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/12003268_941479749231588_772032968653885477_n.jpg?oh=b5d4da4e01e85c2008a5df2a513eb53a&oe=5878F215">
+  </div>
+
   <div class="col-3 homepage_content">
-    <h2>Apps I've built</h2>
+    <h2>Projects</h2>
     <hr>
-    <table>
-      <% @projects.each do |project| %>
-        <td id="display_padding"><%= project.title %></td>
-      <!-- <tr><h3><a href="#"><%= link_to project.title, project %></a></h3></tr> -->
-      <!-- <p class="date"> <%=project.created_at.strftime("%A, %b %d")%></p> -->
-      <% end %>
-    </table>
+    <% @projects.each do |project| %>
+      <div id="display_image"> 
+        <h3 class="text"><%= project.title %><p><%= link_to truncate(project.description, length: 120), project %></p></h3>
+        
+        <%= link_to (image_tag project.image.url(:medium), class: "image"), project %>
+        
+      </div>
+    <% end %>
   </div>
 </div>

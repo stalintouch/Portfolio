@@ -35,6 +35,8 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 gem 'devise', '~> 3.5', '>= 3.5.6'
 
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
