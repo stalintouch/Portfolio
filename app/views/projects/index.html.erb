@@ -3,8 +3,9 @@
 <div id="posts_wrapper" class="skinny_wrapper">
   <% @projects.each do |project| %>
     <div class="post">
-      <p class="date"><%= project.created_at.strftime('%a, %B %d') %></p>
+      <p class="date"><%= (project.created_at - 28.days).strftime("%A, %b %d") %></p>
       <h2><a href="#"><%= link_to project.title, project %></a></h2>
+      <%= link_to (image_tag project.image.url(:medium), class: "image"), project %>
       <hr>
     </div>
   <% end %>

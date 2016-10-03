@@ -8,6 +8,7 @@
     </ul>
   <% end %>
 
+
   <%= f.label :title %><br>
   <%= f.text_field :title %>
 
@@ -26,6 +27,14 @@
 
   <br>
   <br>
+  
+  <%= f.label :image %><br>
+  <%= f.file_field :image %>
 
+  <%= f.label :video %><br>
+  <%= f.text_field :video %>
+
+  <br>
+  <br>
   <%= f.submit %>
 <% end %>  

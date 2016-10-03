@@ -2,6 +2,14 @@
   padding: 3em 0;
   .post {
     text-align: center;
+    .image {
+      height: 230px;
+      width: 500px;
+      border-radius: 5px;  
+      overflow: hidden;
+      margin-top: 0;
+      border: 5px solid $border;          
+    }
     .date {
       font-size: .9em;
       margin: 0;
@@ -30,6 +38,14 @@
   hr {
       margin: 3em auto;
     }
+    #content {
+    .image{
+      height: 300px;
+      width: 100%;
+      border: 5px solid $border; 
+
+    }
+  }
   header {
     text-align: center;
     .date {
@@ -39,28 +55,7 @@
     }
     h1 {
       margin: 0;
-    }
-    
-  }
-
-  #share_box {
-    text-align: center;
-    p {
-      padding: 0 0 1em 0;
-      margin: 0;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: $dark;
-      font-size: .8em;
-    }
-    i {
-      color: $dark;
-      padding: 1em 1.5em;
-      &:hover {
-        color: $highlight;
-        cursor: pointer;
-      }
-    }
+    } 
   }
 }
 
