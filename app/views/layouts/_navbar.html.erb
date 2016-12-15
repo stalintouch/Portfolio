@@ -1,0 +1,109 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- logo --> 
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="main-navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand"><h1 id="brand">Stalin Vasq<span style="color:salmon">uez</span></h1></a>
+      </div>
+      <!-- menu items -->
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", root_path%> </li>
+          <li><%= link_to "Projects", projects_path, class: "projects" %></li>
+          <li><a href="#about" data-toggle="modal">About</a></li>
+          <li><a href="#contact" data-toggle="modal" style="color:salmon">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+    <!-- contact modal -->
+    <div class="container">
+      <div class="modal fade" id="contact">
+        <div class="modal-dialog">
+          <div class="modal-content profile-picture">
+            <!-- header -->
+            <div class="modal-header">
+              <div class="modal-title"><h3 style="color: white">Contact form</h3></div>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- body -->
+
+            <div class="modal-body">
+            <h4 style="color:white">Please leave you name, email address and a short note on how and when to contact you</h4>
+            <div class="modal-footer">
+              <a class="about-footer" href="https://github.com/stalintouch"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+              <a class="about-footer" href="https://ca.linkedin.com/in/stalin-vasquez-b1717a127"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+              <a class="about-footer" href="https://resume.creddle.io/resume/d67a5bplva9"><i class="fa fa-briefcase fa-3x" aria-hidden="true"></i></a>
+            </div>
+              <%= form_for @contact do |f| %>
+                <%= f.text_field :name, placeholder: 'Your Name',required: true, class: "form-control" %>
+                <br>
+                <br>
+                <%= f.text_field :email, placeholder: 'Your Email', required: true, class:"form-control" %>
+                <br>
+          
+                <%= f.text_area :message, placeholder: 'Your message', required: true, class: "form-control", rows: "5" %>
+                <br>
+                <div class="hidden">
+                  <%= f.label :nickname %><br>
+                  <%= f.text_field :nickname, hint: 'leave this field blank' %>
+                </div>
+                  <%= f.submit 'Send Message', class: 'btn btn-primary btn-block' %>
+                </div>
+              <% end %>
+              <!-- <form role="form">
+                <div class="form-group">
+                  <input type="Name" class="form-control" placeholder="Name"></input>
+                  <input type="email" class="form-control" placeholder="Email"></input>
+                  <label for="comment" style="color: white">Comment:</label>
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+              </form> -->
+            </div>
+            <!-- button -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- about modal -->
+    <div class="container">
+      <div class="modal fade" id="about">
+        <div class="modal-dialog">
+          <div class="modal-content profile-picture">
+            <!-- header -->
+            <div class="modal-header">
+              <div class="modal-title"><h3 style="color: white">About me</h3></div>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- body -->
+            <div class="modal-body about-modal" style="font-size: 20px; color: white">
+            <p>I'm a Web Developer with a background in Civil Engineer. Having a passion to work on improving user experience as well as designing apps that would improve peoples lives is my goal. 
+            I'm looking for new challenges that requires the need to learn new languages or frameworks that will enhance my skills and productivity.</p>
+            <p>You can find me on Github <i class="fa fa-eercast"></i><i class="fa fa-registered "></i>  Linkedin <i class="fa fa-eercast"></i><i class="fa fa-registered "></i>  my Resume</p>
+              
+            </div>
+            <!-- button -->
+            <div class="modal-footer">
+              <a class="about-footer" href="https://github.com/stalintouch"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+              <a class="about-footer" href="https://ca.linkedin.com/in/stalin-vasquez-b1717a127"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+              <a class="about-footer" href="https://resume.creddle.io/resume/d67a5bplva9"><i class="fa fa-briefcase fa-3x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <div class="alert alert-<%= name.to_s == 'notice' ? 'success' : 'danger' %>">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    </div>
+  <% end %>
+<% end %>

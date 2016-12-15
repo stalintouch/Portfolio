@@ -11,3 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
+# Ignore the secrets.yml file for storing keys
+/config/secrets.yml
+# Ignore application configuration
+/config/application.yml
