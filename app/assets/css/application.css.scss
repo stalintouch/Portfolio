@@ -1,0 +1,397 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$salmon: salmon; 
+html,body {
+  height: 100%;
+  width:100%;
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+.streamer {
+  height: 77%;
+  width: 100%;
+  overflow: hidden;
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.85), 
+    rgba(0, 0, 0, 0.85)
+    ),
+  url("profile.jpg")no-repeat center center fixed;
+  -o-background-size: 100% 100%, cover;
+  -moz-background-size: 100% 100%, cover;
+  -webkit-background-size: 100% 100%, cover;
+  background-size: 100% 100%;
+  position: relative;
+
+  .app-stream-wrapper{
+    height: 1290px;
+    position: relative;
+
+    .col-xs-12 {
+      
+    }
+    .app-stream {
+      display: block;
+      position: absolute;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease-in-out;
+      height: 14%;
+      opacity: 0.3;
+      width: 14%;
+      border-radius: 50%;
+      overflow: hidden;
+      &:hover{
+        opacity: 1.0;
+        position:absolute;
+        z-index: 999;
+        width: 20%;
+        height: 11%;
+        border-radius: 10px;
+        margin-top: 2.2%;
+      } 
+
+      .image-title{
+        font-size: 1.5em;
+        color: $salmon;
+        a{
+          color: #F04B4B;
+          text-decoration: none;
+        }
+      }
+
+      .text-description {
+        font-size: 1em;
+        color: $salmon;
+        text-decoration: none;
+        &:hover {
+          background: #ffb7b7;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.display-app-1 {
+  background: url("quote.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-4 13s linear infinite;
+}
+.display-app-2 {
+  background: url("weather.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-4 25s linear infinite;
+}
+.display-app-3 {
+  background: url("workout.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-3 12s linear infinite;
+}
+.display-app-4 {
+  background: url("reddit.jpg");
+  background-size: 100% 100%, auto;
+   animation: group-1 35s linear 6s infinite;
+   visibility: hidden;
+}
+.display-app-5 {
+  background: url("twitter.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-5 33s linear  infinite;
+}
+.display-app-6 {
+  background: url("blog.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-5 15s linear infinite;
+}
+
+.display-app-7 {
+  background: url("job.jpg");
+  background-size: 100% 100%, auto;
+   animation: group-3 18s linear 10s infinite;
+   visibility: hidden;
+}
+.display-app-8 {
+  background: url("portfolio.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-2 14s linear  infinite;
+}
+.display-app-9 {
+  background: url("recipe.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-1 13s linear 2s infinite;
+  visibility: hidden;
+}
+.display-app-10 {
+  background: url("pinterest.jpg");
+  background-size: 100% 100%, auto;
+   animation: group-1 20s linear  infinite;
+   visibility: hidden;
+}
+.display-app-11 {
+  background: url("mike.jpg");
+  background-size: 100% 100%, auto;
+   animation: group-2 20s linear 2s infinite;
+   visibility: hidden;
+}
+.display-app-12 {
+  background: url("subsc.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-2 29s linear 6s infinite;
+  visibility: hidden;
+}
+.display-app-13 {
+  background: url("forum.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-3 10s linear 16s infinite;
+  visibility: hidden;
+}
+
+@keyframes group-1 {
+  0% {
+    top: 0;
+    visibility: visible;
+    left: -200px;
+  }
+
+  40% {
+    top: 27%
+  }
+ 
+  100% {
+    top: 0;
+    visibility: visible;
+    left: 90%;
+   
+  }
+}
+
+@keyframes group-2 {
+  0% {
+    visibility: visible;
+    top: 10%;
+    right: -250px;
+  }
+
+  40% {
+    top: 25%;
+  }
+
+  60% {
+    top:10%;
+  }
+
+  100%{
+    visibility: visible;
+    right: 100%;
+    top:25%;
+  }
+}
+
+@keyframes group-3 {
+  0% {
+    visibility: visible;
+    top: 23%;
+    left:-200px;    
+  }
+  45% {
+    top:0%;
+  }
+
+  100% {
+    visibility: visible;
+    left: 90%;
+    top: 23%;
+    
+  }
+}
+
+@keyframes group-4 {
+  0% {
+    visibility: visible;
+    top:0%;
+    left: 10%
+  }
+
+  20%{
+    top:29%;
+    left: 20%;
+  }
+  40%{
+    top: 0%;
+    left: 40%;
+  }
+
+  60% {
+    top: 29%;
+    left: 60%
+  }
+
+  80% {
+    top: 0%;
+    left: 80%;
+  }
+
+  100%{
+    visibility: visible;
+    top:29%;
+    left:100%;
+  }
+}
+
+@keyframes group-5 {
+   0% {
+    visibility: visible;
+    top:29%;
+    left: 100%;
+  }
+
+  10%{
+    top:0%;
+    left: 70%;
+  }
+  30%{
+    top: 29%;
+    left: 50%;
+  }
+
+  50% {
+    top: 0%;
+    left: 30%
+  }
+
+  70% {
+    top: 29%;
+    left: 10%;
+  }
+
+  100%{
+    visibility: visible;
+    top:100%;
+    left:0%;
+  }
+}
+.brand{
+  color: rgba(0, 0, 0, 0.70)
+}
+
+.is-paused{
+  animation-play-state: paused;
+  z-index: 9999990;
+  transition: all .8s ease-in-out;
+
+  &:hover{
+    transform:scale(1.5);
+  }
+}
+
+
+.navbar-brand {
+  font-size: 40px;
+  margin-top: -29px;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+.navbar-nav {
+  clear: both;
+  margin-left: -30px;
+  font-size: 12px;
+  color: blue;
+  padding-top: 30px;
+  position: absolute;
+  li {
+    margin-right: -5px;
+  }
+}
+
+.navbar-default { 
+  margin: 0; 
+}
+
+.about-footer{
+  float: left;
+  padding-right: 20px;
+  color: rgba(255, 255, 255, 0.70)
+}
+
+.profile-picture {
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.65), 
+    rgba(0, 0, 0, 0.65)
+    ),
+  url("profile-picture.jpg")no-repeat center center fixed;
+  
+}
+
+#video-background {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+  background: url("background.jpg");
+  background-size: 100% 100% cover;
+}
+
+.project_wrapper {
+  height: 50%;
+  float: left;
+  a{
+    color: white;
+    text-decoration: none;
+
+    &:hover{
+      color: $salmon;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.image-show {
+  height: 450px;
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+.image{
+  height: 300px;
+  width: 100%;
+}
+
+.title {
+  color: white;
+  position: relative;
+}
+
+.title-show{
+  color: rgba(0, 0, 0, 0.55)
+}
+
+.show-description {
+  line-height: 50px;
+}
+
+
+
+

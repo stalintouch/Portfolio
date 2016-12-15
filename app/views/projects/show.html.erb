@@ -1,32 +1,34 @@
-<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+<div class="container">
   <header>
-  <p class="date"><%= (@project.created_at - 28.days).strftime("%A, %b %d") %></p>
-    <h1><%= @project.title %></h1>
+  
+    <h1 class="text-center title-show"><%= @project.title %></h1>
     <hr>
   </header>
 
   <div id="content">
     <% if @project.video.present? %>
-      <div class="video">
+      <div class="video text-center img-rounded">
         <%= video_tag @project.video, :size => "640x480", :controls => true, autoplay: true %>
       </div>
     <% else %>
       <div>
-        <%= link_to image_tag(@project.image.url(:medium), class: "image"), @project.link, target: '_blank' %>
+        <%= link_to image_tag(@project.image.url(:medium), class: "image-show img-rounded text-center"), @project.link, target: '_blank' %>
       </div>
     <% end %>
-
-    <br>
-   <%= markdown @project.description %>
     
-    <div class="button_wrapper">
-      <a href="<%= @project.link %>" class="project_button" target="_blank">Visit <%= @project.title %></a>
+    <br>
+    <div class="col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 text-center show-description"><h4><%= markdown @project.description %></h4></div>
+    <br>
+    <br>
+    <br>
+    <div class="button_wrapper text-center">
+      <a class="btn btn-success" href="<%= @project.link %>" class="project_button text-center" target="_blank">Visit <%= @project.title %></a>
     </div>
   </div>
-
-  <%= link_to 'Edit', edit_project_path %>
-  <%= link_to 'Delete', project_path, method: :delete, data: { confirm: "Are you sure" } %>
-
+  <div class="col-lg-offset-1 col-md-offset-1">
+  <%= link_to 'Edit', edit_project_path, class: "btn btn-default" %>
+  <%= link_to 'Delete', project_path, method: :delete, data: { confirm: "Are you sure" }, class: "btn btn-default" %>
+  </div>
   
   <hr>
 </div>
