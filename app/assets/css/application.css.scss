@@ -23,7 +23,7 @@ html,body {
 }
 
 .streamer {
-  height: 77%;
+  height: 90vh;
   width: 100%;
   overflow: hidden;
   background:
@@ -39,12 +39,9 @@ html,body {
   position: relative;
 
   .app-stream-wrapper{
-    height: 1290px;
+    height: 90vh;
     position: relative;
 
-    .col-xs-12 {
-      
-    }
     .app-stream {
       display: block;
       position: absolute;
@@ -52,7 +49,7 @@ html,body {
       -moz-transition: all 1s ease;
       -o-transition: all 1s ease;
       transition: all 1s ease-in-out;
-      height: 14%;
+      height: 30%;
       opacity: 0.3;
       width: 14%;
       border-radius: 50%;
@@ -62,12 +59,13 @@ html,body {
         position:absolute;
         z-index: 999;
         width: 20%;
-        height: 11%;
+        height: 20%;
         border-radius: 10px;
         margin-top: 2.2%;
       } 
 
       .image-title{
+        margin-top: -0.3px;
         font-size: 1.5em;
         color: $salmon;
         a{
@@ -92,74 +90,74 @@ html,body {
 .display-app-1 {
   background: url("quote.jpg");
   background-size: 100% 100%, auto;
-  animation: group-4 13s linear infinite;
+  animation: group-4 23s linear infinite;
 }
 .display-app-2 {
   background: url("weather.jpg");
   background-size: 100% 100%, auto;
-  animation: group-4 25s linear infinite;
+  animation: group-4 35s linear infinite;
 }
 .display-app-3 {
   background: url("workout.jpg");
   background-size: 100% 100%, auto;
-  animation: group-3 12s linear infinite;
+  animation: group-3 22s linear infinite;
 }
 .display-app-4 {
   background: url("reddit.jpg");
   background-size: 100% 100%, auto;
-   animation: group-1 35s linear 6s infinite;
+   animation: group-1 45s linear 6s infinite;
    visibility: hidden;
 }
 .display-app-5 {
   background: url("twitter.jpg");
   background-size: 100% 100%, auto;
-  animation: group-5 33s linear  infinite;
+  animation: group-5 43s linear  infinite;
 }
 .display-app-6 {
   background: url("blog.jpg");
   background-size: 100% 100%, auto;
-  animation: group-5 15s linear infinite;
+  animation: group-5 25s linear infinite;
 }
 
 .display-app-7 {
   background: url("job.jpg");
   background-size: 100% 100%, auto;
-   animation: group-3 18s linear 10s infinite;
+   animation: group-3 28s linear 10s infinite;
    visibility: hidden;
 }
 .display-app-8 {
   background: url("portfolio.jpg");
   background-size: 100% 100%, auto;
-  animation: group-2 14s linear  infinite;
+  animation: group-2 24s linear  infinite;
 }
 .display-app-9 {
   background: url("recipe.jpg");
   background-size: 100% 100%, auto;
-  animation: group-1 13s linear 2s infinite;
+  animation: group-1 33s linear 2s infinite;
   visibility: hidden;
 }
 .display-app-10 {
   background: url("pinterest.jpg");
   background-size: 100% 100%, auto;
-   animation: group-1 20s linear  infinite;
+   animation: group-1 30s linear  infinite;
    visibility: hidden;
 }
 .display-app-11 {
   background: url("mike.jpg");
   background-size: 100% 100%, auto;
-   animation: group-2 20s linear 2s infinite;
+   animation: group-2 30s linear 2s infinite;
    visibility: hidden;
 }
 .display-app-12 {
   background: url("subsc.jpg");
   background-size: 100% 100%, auto;
-  animation: group-2 29s linear 6s infinite;
+  animation: group-2 39s linear 6s infinite;
   visibility: hidden;
 }
 .display-app-13 {
   background: url("forum.jpg");
   background-size: 100% 100%, auto;
-  animation: group-3 10s linear 16s infinite;
+  animation: group-3 20s linear 16s infinite;
   visibility: hidden;
 }
 
@@ -170,8 +168,9 @@ html,body {
     left: -200px;
   }
 
-  40% {
-    top: 27%
+  50% {
+    top: 70%;
+    left: 50%;
   }
  
   100% {
@@ -185,7 +184,7 @@ html,body {
 @keyframes group-2 {
   0% {
     visibility: visible;
-    top: 10%;
+    top: 0%;
     right: -250px;
   }
 
@@ -194,7 +193,7 @@ html,body {
   }
 
   60% {
-    top:10%;
+    top:0%;
   }
 
   100%{
@@ -207,7 +206,7 @@ html,body {
 @keyframes group-3 {
   0% {
     visibility: visible;
-    top: 23%;
+    top: 70%;
     left:-200px;    
   }
   45% {
@@ -217,78 +216,48 @@ html,body {
   100% {
     visibility: visible;
     left: 90%;
-    top: 23%;
+    top: 70%;
     
   }
 }
 
 @keyframes group-4 {
-  0% {
+   0% {
     visibility: visible;
-    top:0%;
-    left: 10%
+    top: 70%;
+    left: -250px;
   }
 
-  20%{
-    top:29%;
-    left: 20%;
-  }
-  40%{
-    top: 0%;
-    left: 40%;
+  40% {
+    top: 55%;
   }
 
   60% {
-    top: 29%;
-    left: 60%
-  }
-
-  80% {
-    top: 0%;
-    left: 80%;
+    top:70%;
   }
 
   100%{
     visibility: visible;
-    top:29%;
-    left:100%;
+    left: 100%;
+    top:35%;
   }
 }
 
 @keyframes group-5 {
    0% {
     visibility: visible;
-    top:29%;
+    top:35%;
     left: 100%;
-  }
-
-  10%{
-    top:0%;
-    left: 70%;
-  }
-  30%{
-    top: 29%;
-    left: 50%;
-  }
-
-  50% {
-    top: 0%;
-    left: 30%
-  }
-
-  70% {
-    top: 29%;
-    left: 10%;
   }
 
   100%{
     visibility: visible;
-    top:100%;
+    top:35%;
     left:0%;
   }
 }
-.brand{
-  color: rgba(0, 0, 0, 0.70)
+#brand{
+  font-size: 2.2em;
 }
 
 .is-paused{
@@ -303,7 +272,6 @@ html,body {
 
 
 .navbar-brand {
-  font-size: 40px;
   margin-top: -29px;
   position: relative;
   padding-bottom: 90px;
@@ -312,8 +280,7 @@ html,body {
 .navbar-nav {
   clear: both;
   margin-left: -30px;
-  font-size: 12px;
-  color: blue;
+  font-size: 1em;
   padding-top: 30px;
   position: absolute;
   li {
