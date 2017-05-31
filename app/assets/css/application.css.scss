@@ -49,16 +49,16 @@ html,body {
       -moz-transition: all 1s ease;
       -o-transition: all 1s ease;
       transition: all 1s ease-in-out;
-      height: 30%;
+      height: 20%;
       opacity: 0.3;
-      width: 14%;
+      width: 20%;
       border-radius: 50%;
       overflow: hidden;
       &:hover{
         opacity: 1.0;
         position:absolute;
         z-index: 999;
-        width: 20%;
+        width: 30%;
         height: 20%;
         border-radius: 10px;
         margin-top: 2.2%;
@@ -359,6 +359,18 @@ html,body {
   line-height: 50px;
 }
 
+@media (max-width: 615px) {
+  .streamer {
+  height: 50vh;
+  }
+  .app-stream-wrapper{
+    height: 50vh;
+  }
+  .app-stream {
 
-
+    height: 15% !important;
+    opacity: 0.3;
+    width: auto;
+  }
+}
 
