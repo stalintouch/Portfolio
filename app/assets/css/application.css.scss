@@ -15,16 +15,22 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-$salmon: salmon; 
+$salmon: salmon;  
 html,body {
   height: 100%;
   width:100%;
+  font-size: 14px;
   font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
-
+.container-fluid{
+  height: 100%;
+  width:100%;
+  display:flex;
+}
 .streamer {
-  height: 90vh;
-  width: 100%;
+  
+  flex:1;
+  width: 100vw;
   overflow: hidden;
   background:
   linear-gradient(
@@ -39,127 +45,308 @@ html,body {
   position: relative;
 
   .app-stream-wrapper{
-    height: 90vh;
+    height: 100%;
+    width: 100%;
     position: relative;
-
-    .app-stream {
+    
+    .app-stream { 
+      padding:20px;
       display: block;
       position: absolute;
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
       -o-transition: all 1s ease;
       transition: all 1s ease-in-out;
-      height: 20%;
-      opacity: 0.3;
-      width: 20%;
       border-radius: 50%;
+      height:15em;
+      width: 15em;
       overflow: hidden;
+      opacity: 1;
+      h3{
+          margin-top: 0;
+        }
+      .text-no-visible {
+        opacity: 0;
+        transition:all 3s ease;
+      }
       &:hover{
-        opacity: 1.0;
-        position:absolute;
+        opacity:.8;
         z-index: 999;
-        width: 30%;
-        height: 20%;
+        height: 10em;
+        width: 20em;
         border-radius: 10px;
-        margin-top: 2.2%;
+        .text-no-visible {
+          opacity: 1;
+        }
+        
       } 
 
       .image-title{
-        margin-top: -0.3px;
         font-size: 1.5em;
-        color: $salmon;
         a{
-          color: #F04B4B;
+          color: white;
           text-decoration: none;
         }
       }
 
       .text-description {
         font-size: 1em;
-        color: $salmon;
+        color: white;
         text-decoration: none;
-        &:hover {
-          background: #ffb7b7;
-          transition: all 0.2s ease-in-out;
-        }
+        background: salmon;
+        
       }
     }
   }
 }
 
+
 .display-app-1 {
-  background: url("quote.jpg");
+  background: url("wikipedia.jpg");
   background-size: 100% 100%, auto;
-  animation: group-4 23s linear infinite;
+  animation: group-4 13s linear infinite;
 }
 .display-app-2 {
-  background: url("weather.png");
+  background: url("mike.jpg");
   background-size: 100% 100%, auto;
   animation: group-4 35s linear infinite;
 }
 .display-app-3 {
-  background: url("workout.png");
+  background: url("Pomodoro.jpg");
   background-size: 100% 100%, auto;
   animation: group-3 22s linear infinite;
 }
 .display-app-4 {
-  background: url("reddit.jpg");
+  background: url("calculator.jpg");
   background-size: 100% 100%, auto;
    animation: group-1 45s linear 6s infinite;
    visibility: hidden;
 }
 .display-app-5 {
-  background: url("twitter.jpg");
+  background: url("knowledge.jpg");
   background-size: 100% 100%, auto;
   animation: group-5 43s linear  infinite;
 }
 .display-app-6 {
-  background: url("blog.jpg");
+  background: url("template.jpg");
   background-size: 100% 100%, auto;
   animation: group-5 25s linear infinite;
 }
 
 .display-app-7 {
-  background: url("job.jpg");
+  background: url("contact-list.jpg");
   background-size: 100% 100%, auto;
-   animation: group-3 28s linear 10s infinite;
+   animation: group-4 28s linear 10s infinite;
    visibility: hidden;
 }
 .display-app-8 {
-  background: url("portfolio.png");
+  background: url("foundation.jpg");
   background-size: 100% 100%, auto;
-  animation: group-2 24s linear  infinite;
+  animation: group-2 9s linear  infinite;
 }
 .display-app-9 {
-  background: url("recipe.jpg");
+  background: url("react.jpg");
   background-size: 100% 100%, auto;
-  animation: group-1 33s linear 2s infinite;
+  animation: group-1 10s linear 0s infinite;
   visibility: hidden;
 }
 .display-app-10 {
-  background: url("pinterest.jpg");
+  background: url("quote.jpg");
   background-size: 100% 100%, auto;
    animation: group-1 30s linear  infinite;
    visibility: hidden;
 }
 .display-app-11 {
-  background: url("mike.jpg");
+  background: url("weather.png");
   background-size: 100% 100%, auto;
-   animation: group-2 30s linear 2s infinite;
+   animation: group-4 30s linear 2s infinite;
    visibility: hidden;
 }
 .display-app-12 {
-  background: url("subsc.jpg");
+  background: url("workout.png");
   background-size: 100% 100%, auto;
-  animation: group-2 39s linear 6s infinite;
+  animation: group-2 19s linear 0s infinite;
   visibility: hidden;
 }
 .display-app-13 {
-  background: url("forum.jpg");
+  background: url("reddit.jpg");
   background-size: 100% 100%, auto;
   animation: group-3 20s linear 16s infinite;
   visibility: hidden;
 }
+
+.display-app-14 {
+  background: url("twitter.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-4 10s linear 6s infinite;
+  visibility: hidden;
+}
+
+.display-app-15 {
+  background: url("blog.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-5 20s linear 26s infinite;
+  visibility: hidden;
+}
+
+.display-app-16 {
+  background: url("job.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-1 9s linear 8s infinite;
+  visibility: hidden;
+}
+
+.display-app-17 {
+  background: url("portfolio.png");
+  background-size: 100% 100%, auto;
+  animation: group-2 15s linear 15s infinite;
+  visibility: hidden;
+}
+
+.display-app-18 {
+  background: url("recipe.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-3 20s linear 30s infinite;
+  visibility: hidden;
+}
+
+.display-app-19 {
+  background: url("pinterest.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-4 7s linear 5s infinite;
+  visibility: hidden;
+}
+
+.display-app-20 {
+  background: url("mike.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-5 30s linear 20s infinite;
+  visibility: hidden;
+}
+
+.display-app-21 {
+  background: url("subsc.jpg");
+  background-size: 100% 100%, auto;
+  animation: group-1 20s linear 16s infinite;
+  visibility: hidden;
+}
+
+.brand{
+  padding-bottom: 1%;
+  padding-top: 0.5%;
+  a{
+    &:hover{
+      text-decoration: none;
+    }
+  }
+   h1 {
+    margin-left:100px;
+    color: rgba(50,50,50,0.7);
+  }
+}
+
+.is-paused{
+  animation-play-state: paused;
+  z-index: 9999990;
+  transition: all .8s ease-in-out;
+
+  &:hover{
+    transform:scale(1.5);
+  }
+}
+
+
+
+.about-footer{
+  float: left;
+  padding-right: 20px;
+  color: rgba(255, 255, 255, 0.70)
+}
+
+.profile-picture {
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.65), 
+    rgba(0, 0, 0, 0.65)
+    ),
+  url("profile-picture.jpg")no-repeat center center fixed;
+  
+}
+
+#video-background {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -100;
+  background: url("background.jpg");
+  background-size: 100% 100% cover;
+}
+.img-background{
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.65), 
+    rgba(0, 0, 0, 0.65)
+    ),
+  url("boda.jpg")no-repeat center center fixed;
+  -o-background-size: 100% 100%, cover;
+  -moz-background-size: 100% 100%, cover;
+  -webkit-background-size: 100% 100%, cover;
+  background-size: 100% 100%;
+}
+.project_wrapper {
+  height: 50%;
+  float: left;
+  a{
+    color: white;
+    text-decoration: none;
+
+    &:hover{
+      color: $salmon;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.image-show {
+  height: auto;
+  width: 100%;
+  
+}
+.image{
+  height: 250px;
+  width: 90%;
+}
+
+.title {
+  color: white;
+  position: relative;
+}
+
+.title-show{
+  color: white;
+}
+
+.description-centered{
+  display: flex;
+  justify-content:center;
+
+  .show-description {
+    text-align: center;
+    margin-top:40px;
+    margin-bottom:20px;
+    padding:20px;
+    background: salmon;
+    font-size: 18px;
+    color:white;
+  }
+}
+
+
 
 @keyframes group-1 {
   0% {
@@ -256,121 +443,11 @@ html,body {
     left:0%;
   }
 }
-#brand{
-  font-size: 2.2em;
-}
-
-.is-paused{
-  animation-play-state: paused;
-  z-index: 9999990;
-  transition: all .8s ease-in-out;
-
-  &:hover{
-    transform:scale(1.5);
-  }
-}
 
 
-.navbar-brand {
-  margin-top: -29px;
-  position: relative;
-  padding-bottom: 90px;
-}
-
-.navbar-nav {
-  clear: both;
-  margin-left: -30px;
-  font-size: 1em;
-  padding-top: 30px;
-  position: absolute;
-  li {
-    margin-right: -5px;
-  }
-}
-
-.navbar-default { 
-  margin: 0; 
-}
-
-.about-footer{
-  float: left;
-  padding-right: 20px;
-  color: rgba(255, 255, 255, 0.70)
-}
-
-.profile-picture {
-  background:
-  linear-gradient(
-    rgba(0, 0, 0, 0.65), 
-    rgba(0, 0, 0, 0.65)
-    ),
-  url("profile-picture.jpg")no-repeat center center fixed;
-  
-}
-
-#video-background {
-  position: fixed;
-  right: 0; 
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -100;
-  background: url("background.jpg");
-  background-size: 100% 100% cover;
-}
-
-.project_wrapper {
-  height: 50%;
-  float: left;
-  a{
-    color: white;
-    text-decoration: none;
-
-    &:hover{
-      color: $salmon;
-      transition: all 0.2s ease-in-out;
+ @media (max-width: 767px) {
+  .navbar-collapse
+    {
+        background-color:transparent;
     }
-  }
 }
-
-.image-show {
-  height: 450px;
-  width: 75%;
-  display: block;
-  margin: 0 auto;
-}
-.image{
-  height: 250px;
-  width: 90%;
-}
-
-.title {
-  color: white;
-  position: relative;
-}
-
-.title-show{
-  color: rgba(0, 0, 0, 0.55)
-}
-
-.show-description {
-  line-height: 50px;
-}
-
-@media (max-width: 615px) {
-  .streamer {
-  height: 50vh;
-  }
-  .app-stream-wrapper{
-    height: 50vh;
-  }
-  .app-stream {
-
-    height: 15% !important;
-    opacity: 0.3;
-    width: auto;
-  }
-}
-

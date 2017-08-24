@@ -1,34 +1,33 @@
-<div class="container">
+<div class="container img-background">
   <header>
-  
+
     <h1 class="text-center title-show"><%= @project.title %></h1>
     <hr>
   </header>
 
-  <div id="content">
-    <% if @project.video.present? %>
-      <div class="video text-center img-rounded">
-        <%= video_tag @project.video, :size => "640x480", :controls => true, autoplay: true %>
-      </div>
-    <% else %>
-      <div>
-        <%= link_to image_tag(@project.image.url(:medium), class: "image-show img-rounded text-center"), @project.link, target: '_blank' %>
-      </div>
-    <% end %>
-    
-    <br>
-    <div class="col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 text-center show-description"><h4><%= markdown @project.description %></h4></div>
-    <br>
-    <br>
-    <br>
-    <div class="button_wrapper text-center">
-      <a class="btn btn-success" href="<%= @project.link %>" class="project_button text-center" target="_blank">Visit <%= @project.title %></a>
+  <% if @project.video.present? %>
+  <div class="video text-center img-rounded">
+    <%= video_tag @project.video, :size => "640x480", :controls => true, autoplay: true %>
+  </div>
+  <% else %>
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <%= link_to image_tag(@project.image.url(:medium), class: "image-show img-rounded text-center"), @project.link, target: '_blank' %>
+  </div>
+  <% end %>
+
+  <br>
+  <div class="col-sm-12 description-centered">
+    <div class="col-sm-6 show-description">
+      <h4><%= @project.description %></h4>
     </div>
   </div>
-  <div class="col-lg-offset-1 col-md-offset-1">
-  <%= link_to 'Edit', edit_project_path, class: "btn btn-default" %>
-  <%= link_to 'Delete', project_path, method: :delete, data: { confirm: "Are you sure" }, class: "btn btn-default" %>
+  <div class="col-xs-12 button_wrapper text-center">
+    <a class="btn btn-success" href="<%= @project.link %>" class="project_button text-center" target="_blank">Visit <%= @project.title %></a>
+  </div>
+  <div class="col-xs-12 col-lg-offset-1 col-md-offset-1">
+    <%= link_to 'Edit', edit_project_path, class: "btn btn-default" %>
+    <%= link_to 'Delete', project_path, method: :delete, data: { confirm: "Are you sure" }, class: "btn btn-default" %>
   </div>
   
-  <hr>
+  
 </div>

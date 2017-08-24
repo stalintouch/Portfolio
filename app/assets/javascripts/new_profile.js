@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(document).on('ready page:change', function() {
   var appStream = $('.app-stream');
   appStream.on('mouseenter mouseleave', function(){
     $(this).toggleClass('is-paused');
