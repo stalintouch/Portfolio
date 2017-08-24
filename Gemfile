@@ -64,3 +64,6 @@ group :development, :test do
   gem 'net-ssh'
 end
 
+group :production do
+  gem 'rails_12factor', group: :production
+end
